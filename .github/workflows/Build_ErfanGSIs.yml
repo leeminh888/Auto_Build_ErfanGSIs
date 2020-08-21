@@ -70,6 +70,10 @@ jobs:
       run: |
         sudo ./ErfanGSIs/url2GSI.sh $ROM_URL $ROM_NAME
 
+    - name: Print build info
+      run: |
+           cat ErfanGSIs/output/*-Aonly-*.txt
+
     - name: Zip GSI Images
       run: |
        mkdir final
@@ -97,7 +101,3 @@ jobs:
         name: AB-Image
         path: final/*AB.xz
         if-no-files-found: error
-
-    - name: Print build info
-      run: |
-           cat home/runner/work/Auto_Build_ErfanGSIs/Auto_Build_ErfanGSIs/ErfanGSIs/output/*-Aonly-*.txt
