@@ -14,7 +14,7 @@ on:
    types: [started]
    
 env:
-  ROM_URL: https://hugeota.d.miui.com/V12.0.5.0.QJVCNXM/miui_VANGOGH_V12.0.5.0.QJVCNXM_253473e9fe_10.0.zip
+  ROM_URL: https://hugeota.d.miui.com/20.8.20/miui_LAVENDER_20.8.20_2caa79398b_10.0.zip
   ROM_NAME: MIUI
   TZ: Asia/Shanghai
 
@@ -80,13 +80,6 @@ jobs:
        tar -Jcvf final/$ROM_NAME-Aonly.xz /home/runner/work/Auto_Build_ErfanGSIs/Auto_Build_ErfanGSIs/ErfanGSIs/output/$ROM_NAME-Aonly*
        tar -Jcvf final/$ROM_NAME-AB.xz /home/runner/work/Auto_Build_ErfanGSIs/Auto_Build_ErfanGSIs/ErfanGSIs/output/$ROM_NAME-AB*
        cp /home/runner/work/Auto_Build_ErfanGSIs/Auto_Build_ErfanGSIs/ErfanGSIs.tar.xz final/ErfanGSIs.tar.xz
-
-    - name: Upload ErfanGSI Source Code
-      uses: actions/upload-artifact@v2
-      with:
-        name: ErfanGSI-Source-Code
-        path: final/ErfanGSIs.tar.xz
-        if-no-files-found: error
 
     - name: Upload Aonly GSI Images
       uses: actions/upload-artifact@v2
