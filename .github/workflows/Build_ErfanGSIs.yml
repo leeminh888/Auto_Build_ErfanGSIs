@@ -1,6 +1,6 @@
 name: Auto_Build_ErfanGSIs
 
-off:
+on:
 #  release:
 #    types: [published]
 #  push:
