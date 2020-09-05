@@ -57,7 +57,7 @@ jobs:
 
     - name: Clone ErfanGSI Source Code & Zip
       run: |
-        git clone https://github.com/yukosky/ErfanGSIs.git ErfanGSIs
+        git clone https://github.com/leeminh888/ErfanGSIs
         tar -Jcvf ErfanGSIs.tar.xz ErfanGSIs
 
     - name: Set Up ErfanGSI Requirements
